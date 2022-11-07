@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Budget App</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <script src="https://budget-app-budget.web.app/bundle.js"></script>
+    <div id="budget-app"></div>
+    <script type="text/javascript">
+      const webComponentsByRoute = {
+        "/budget": "budget-app-budget",
+      };
+      const webComponentType = webComponentsByRoute[window.location.pathname];
+      const root = document.getElementById("budget-app");
+      const webComponent = document.createElement(webComponentType);
+      root.appendChild(webComponent);
+    </script>
+  </body>
+</html>
